@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        @apply font-poppins overflow-x-hidden;
+    }
+    .container{
+        @apply max-w-[1600px] w-full px-4 mx-auto;
+    }
+    /* h1{
+        @apply text-[90px];
+    }
+    h2{
+        @apply text-[33px];
+    }
+    h3{
+        @apply text-[24px];
+    }
+    h4{
+        @apply text-[16px];
+    }
+    h5{
+        @apply text-[12px];
+    }
+    h6{
+        @apply text-[10px];
+    }
+    p{
+        @apply text-[16px];
+    } */
+}
+
+@layer components{
+    .header__nav.open{
+        @apply right-0 z-50 overflow-y-hidden;
+    }
+    .transparent{
+        @apply hidden;
+    }
+    .transparent.open{
+        @apply block fixed top-[6.3rem] left-0 h-screen w-full backdrop-blur-sm duration-700 overflow-y-hidden;
+    }
+    .toggle__menu{
+        @apply flex flex-col gap-1 z-50 lg:hidden;
+    }
+    .toggle__menu span{
+        @apply content-[*] bg-primary w-10 h-1 rounded-lg duration-700 ease-in-out;
+    }
+    .toggle__menu span:last-child{
+        @apply content-[*] bg-primary w-7 h-1 rounded-lg duration-700 ease-in-out;
+    }
+    .toggle__menu.open span{
+        @apply w-7;
+    }
+    .toggle__menu.open span:last-child{
+        @apply w-10;
+    }
+
+    /* SLIDER */
+ 
+
+    /* OFFER */
+    .offer__tab img{
+        @apply w-20;
+    }
+    .offer__tab img.active{
+        @apply border-2 border-secondary rounded-full p-1;
+    }
+    .offer__details.active{
+        @apply block lg:block;
+    }
+    .offer__details--wrap{
+        @apply grid grid-cols-2 gap-3
+    }
+    .offer__details{
+        @apply hidden lg:hidden max-w-[50rem] lg:mx-auto;
+    }
+    .offer__foods{
+        @apply flex flex-col gap-4 justify-center items-center text-center py-10 border border-white rounded-xl;
+    }
+    .offer__foods img{
+        @apply w-32;
+    }
+    .offer__foods--text h4{
+        @apply text-xl font-semibold;
+    }
+
+
+    /* MENU */
+    .menu__tab li{
+        @apply w-20;
+    }
+    .menu__tab li.active{
+        @apply text-primary;
+    }
+    .menu__details.active{
+        @apply block lg:block;
+    }
+    .menu__details--wrap{
+        @apply grid grid-cols-3 gap-3 ;
+    }
+    .menu__details{
+        @apply hidden lg:hidden max-w-[50rem] lg:mx-auto;
+    }
+    .menu__foods{
+        @apply flex flex-col gap-4 justify-center items-center text-center py-10 lg:py-10 lg:border lg:border-white lg:rounded-xl;
+    }
+    .menu__foods img{
+        @apply w-32;
+    }
+    .menu__foods--text h4{
+        @apply text-xl font-semibold;
+    }
+
+
+
+
+
+
+
+    /* STORY  */
+    .story__item{
+        @apply mb-5 max-w-[35rem] mx-auto;
+    }
+    .story__item h4, .story__item i{
+        @apply bg-primary text-white px-3 py-2 font-bold transition-all flex justify-between items-center cursor-pointer;
+    }
+    .story__item i.open{
+        @apply rotate-[900deg] transition-all;
+    }
+    .story__item p{
+        @apply bg-slate-50 h-auto max-h-0 overflow-hidden transition-all text-justify;
+    }
+    .story__item p.open{
+        @apply max-h-[50rem] bg-slate-50 p-3 transition-all text-justify;
+    }
+
+
+
+    /* BUTTON */
+    .btn{
+        @apply py-2 px-4 bg-transparent border-transparent rounded-xl shadow-[0_8px_24px_-15px_rgba(149,157,165,0.2)];
+    }
+    .btn.bg-primaryy{
+        @apply bg-primary border border-primary text-white hover:bg-transparent hover:text-black;
+    }
+    .btn.readmore{
+        @apply border border-primary hover:text-primary hover:bg-white;
+    }
+    .btn.subscribe{
+        @apply border border-secondary bg-secondary hover:text-black hover:bg-transparent;
+    }
+}
